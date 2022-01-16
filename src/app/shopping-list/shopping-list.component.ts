@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormArray } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 import { Ingredient } from '../shared/ingredient.model';
@@ -34,4 +35,9 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.igChangeSub.unsubscribe();
   }
+
+  //TODO: 아직 모르겠음
+  // get controls() { // a getter!
+  //   return (<FormArray>this.recipeForm.get('ingredients')).controls;
+  // }
 }
